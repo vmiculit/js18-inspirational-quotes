@@ -5,12 +5,12 @@ inspiredApp.controller('mainController', ['$scope', 'quoteFactory', function($sc
 
 		if (quoteFactory.quoteData.length == 0){
 			response.data.forEach(function(item){
-			quoteFactory.quoteData.push(item)
+			new quoteFactory.Quote(item.author, item.content)
 			})
 		}
 
-		$scope.messageContent = quoteFactory.quoteData[5].content
-		$scope.messageAuthor = quoteFactory.quoteData[5].author
+		$scope.randomQuote = quoteFactory.randomQuote()
+		$scope.quotes = quoteFactory.quoteData
 
 
 	}
@@ -24,6 +24,14 @@ inspiredApp.controller('mainController', ['$scope', 'quoteFactory', function($sc
 
 inspiredApp.controller('addQuoteController', ['$scope', 'quoteFactory', function($scope, quoteFactory){
 
-		$scope.messageContent = quoteFactory.quoteData[6].content
-		$scope.messageAuthor = quoteFactory.quoteData[6].author
+	$scope.submitQuote = function(){
+		if ($scope.authorName && $scope.quoteContent){
+			new quoteFactory.Quote($scope.authorName, $scope.quoteContent)
+		}
+		
+		$scope.authorName = ""
+		$scope.quoteContent = ""
+	}
+
+
 }])

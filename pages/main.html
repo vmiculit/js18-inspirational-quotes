@@ -1,6 +1,18 @@
 <!-- home.html -->
 <div class="jumbotron text-center">
 	<h1>Random Quote</h1>
-	<p>{{messageContent}}</p>
-	<p>{{messageAuthor}}</p>
+	<h3><em>{{randomQuote.content}}</em></h3>
+	<p>-- {{randomQuote.author}}</p>
+</div>
+<div ng-repeat="quote in quotes">
+	<div class="row">
+		<div class="col-xs-6 col-sm-3 col-md-2 rating">
+			<input-stars max="5" ng-model="quote.ratingScore" class="custom-rating"></input-stars>
+		</div>
+		<div class="col-xs-12 col-sm-9 col-md-10">
+			<blockquote class="hoverdiv">{{quote.content}}
+			<footer>{{quote.author}}</footer>
+			</blockquote>
+		</div>
+	</div>
 </div>

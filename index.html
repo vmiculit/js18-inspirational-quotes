@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="app/angular-input-stars.css">
 
 	<!-- ANGULAR, ROUTE AND CUSTOM JS-->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.min.js"></script>
@@ -14,24 +15,23 @@
 	<script type="text/javascript" src="app/routes.js"></script>
 	<script type="text/javascript" src="app/factory.js"></script>
 	<script type="text/javascript" src="app/controllers.js"></script>
+	<script type="text/javascript" src="app/angular-input-stars.js"></script>
 
 	<title>JS18: Inspirational Quotes</title>
 </head>
 <body>
-
+<div class="container">
 	<!-- HEADER & NAVBAR -->
 
 	<header>
 		<nav class="navbar navbar-default">
-		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand text-hide" href="#/"></a>
 			</div>
-			<ul class="nav navbar-nav navbar-right">
+			<ul class="nav navbar-nav navbar-left">
 				<li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
 				<li><a href="#addquote"><i class="fa fa-plus"></i> Add Quote</a></li>
 			</ul>
-		</div>
 		</nav>
 	</header>
 
@@ -43,6 +43,8 @@
 		
 
 	</div>
-
+	<hr>
+	<footer>&copy; 2016 Inspiration Inc.</footer>
+</div>
 </body>
 </html>

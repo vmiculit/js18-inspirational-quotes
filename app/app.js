@@ -1,2 +1,2 @@
 // create module
-var inspiredApp = angular.module('inspiredApp', ['ngRoute']);
+var inspiredApp = angular.module('inspiredApp', ['ngRoute', 'angular-input-stars']);

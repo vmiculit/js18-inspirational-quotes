@@ -10,3 +10,24 @@ body {
 	background: url(logo.jpg) center / contain no-repeat;
 	width: 100px;
 }
+
+.hoverdiv {
+	background: #fff;
+}
+
+.hoverdiv:hover {
+	background: #f5f5f5;
+}
+
+.rating {
+	text-align: right;
+}
+.custom-rating > li{
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+}
+
+
+
+
+
