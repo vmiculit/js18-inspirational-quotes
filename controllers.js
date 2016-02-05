@@ -2,15 +2,19 @@
 inspiredApp.controller('mainController', ['$scope', 'quoteFactory', function($scope, quoteFactory){
 
 	quoteFactory.get().then(function(response){
-		response.data.forEach(function(item){
+
+		if (quoteFactory.quoteData.length == 0){
+			response.data.forEach(function(item){
 			quoteFactory.quoteData.push(item)
-		})
-		console.log(quoteFactory.quoteData)
+			})
+		}
+
 		$scope.messageContent = quoteFactory.quoteData[5].content
 		$scope.messageAuthor = quoteFactory.quoteData[5].author
 
 
 	})
+
 }])
 
 

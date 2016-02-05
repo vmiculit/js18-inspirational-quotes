@@ -1,15 +1,6 @@
 inspiredApp.factory('quoteFactory', function($http){
 
-	var quoteData = [
-		{
-			author: "John Doe", 
-			content: "You are wise now. Boom!"
-		},
-		{
-			author: "Jane Doe", 
-			content: "You are bright now. KaBoom!"
-		}
-	]
+	var quoteData = []
 
 	var QuoteMaker = function(author, content){
 		this.author		= author
