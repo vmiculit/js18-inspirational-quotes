@@ -1,7 +1,7 @@
 //create main controller & inject $scope
 inspiredApp.controller('mainController', ['$scope', 'quoteFactory', function($scope, quoteFactory){
 
-	quoteFactory.get().then(function(response){
+	var afterQuotes = function(response){
 
 		if (quoteFactory.quoteData.length == 0){
 			response.data.forEach(function(item){
@@ -13,7 +13,9 @@ inspiredApp.controller('mainController', ['$scope', 'quoteFactory', function($sc
 		$scope.messageAuthor = quoteFactory.quoteData[5].author
 
 
-	})
+	}
+
+	quoteFactory.get().then(afterQuotes)
 
 }])
 
