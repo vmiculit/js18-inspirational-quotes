@@ -1,0 +1,8 @@
+body {
+	background: #eeeeee;
+}
+
+.navbar-brand {
+	background: url(logo.jpg) center / contain no-repeat;
+	width: 100px;
+}
